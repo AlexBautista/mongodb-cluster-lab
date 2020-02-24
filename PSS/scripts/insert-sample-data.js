@@ -1,0 +1,21 @@
+use MyDatabase
+db.MyCollection.insertMany([
+    {"_id" : "A0","name" : "Antuan", "surname" : "Martín", "age": 35, "deleted":false},
+    {"_id" : "A1","name" : "Silvia", "surname" : "Lopez", "age": 45, "deleted":false},
+    {"_id" : "A2","name" : "Carlos", "surname" : "Perez", "age": 55, "deleted":false},
+    {"_id" : "A3","name" : "Santiago", "surname" : "Zarate", "age": 35, "deleted":false},
+    {"_id" : "A4","name" : "Angelica", "surname" : "Romo", "age": 25, "deleted":false},
+    {"_id" : "G0","name" : "Ana","surname" : "Rodriguez","age": 21,"deleted":false},
+    {"_id" : "G1","name" : "Felime","surname" : "Rodriguez","age": 21,"deleted":false},
+    {"_id" : "G2","name" : "Fabiola","surname" : "Camacho","age": 31,"deleted":false},
+    {"_id" : "G3","name" : "Hugo","surname" : "Vazquez","age": 41,"deleted":false},
+    {"_id" : "G4","name" : "David","surname" : "Franco","age": 35,"deleted":false},
+    {"_id" : "G5","name" : "Susana","surname" : "Ramirez","age": 35,"deleted":false},
+    {"_id" : "G6","name" : "Victoria","surname" : "Jimenez","age": 51,"deleted":false},
+    {"_id" : "Z0","name" : "Jose","surname" : "Carrizo","age": 28, "deleted":false},
+    {"_id" : "Z1","name" : "Juan","surname" : "Acosta","age": 27, "deleted":false},
+    {"_id" : "Z2","name" : "Mario","surname" : "Carrasco","age": 32, "deleted":false},
+    {"_id" : "Z3","name" : "Adriana","surname" : "Mendoza","age": 24, "deleted":false},
+    {"_id" : "Z4","name" : "Guadalupe","surname" : "Cisneros","age": 25, "deleted":false},
+    {"_id" : "Z5","name" : "Paula","surname" : "Esparza","age": 27, "deleted":false},
+    ])
