@@ -1,5 +1,5 @@
 =========================================
-Mongolab Sharded Cluster with Docker Compose
+Mongolab Sharded Cluster with Docker Compose 1.0
 =========================================
 
 ### Mongo Lab Components
