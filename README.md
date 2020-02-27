@@ -1,5 +1,5 @@
 =========================================
-Mongolab Sharded Cluster with Docker Compose 1.0
+Mongolab Sharded Cluster with Docker Compose
 =========================================
 
 ### Mongo Lab Components
@@ -10,6 +10,9 @@ Mongolab Sharded Cluster with Docker Compose 1.0
 	* `shard02-a`,`shard02-b`, `shard02-c`
 	* `shard03-a`,`shard03-b`, `shard03-c`
 * 2 Routers (mongos): `router01`, `router02`
+
+
+<img src="https://raw.githubusercontent.com/AlexBautista/mongodb-db-cluster-lab/master/images/MongoDBLabClusterPSS.png" style="width: 100%;" />
 
 
 ### Mongo Lab Setup
