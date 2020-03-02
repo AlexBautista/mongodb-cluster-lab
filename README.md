@@ -12,7 +12,7 @@ Mongolab Sharded Cluster with Docker Compose
 * 2 Routers (mongos): `router01`, `router02`
 
 
-<img src="https://raw.githubusercontent.com/AlexBautista/mongodb-db-cluster-lab/master/images/MongoDBLabClusterPSS.png" style="width: 100%;" />
+![PSS Diagram](/master/images/MongoDBLabClusterPSS.png")
 
 
 ### Mongo Lab Setup
