@@ -86,7 +86,7 @@ while true; do
         3 ) echo "You picked $opt which is option: $REPLY"
             
             echo -e "${CYAN} [TASK] CHECKING MONGO LAB DOCKER CONTAINERS... ${NC}"
-            docker container ls --size --filter name=mongolab* 
+            docker container ls --size --filter name=mongo* 
                        
         
             break;;       
@@ -94,7 +94,7 @@ while true; do
             
             echo -e "${CYAN} [TASK] STARTING MONGO LAB CLUSTER AND MONGO EXPRESS... ${NC}"
             docker-compose up -d
-            docker start mongo-express-gui                       
+            docker container restart mongo-express-gui                       
         
             break;;   
         5 ) echo "You picked $opt which is option $REPLY"
