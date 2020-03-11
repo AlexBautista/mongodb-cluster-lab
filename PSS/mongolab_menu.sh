@@ -124,6 +124,13 @@ while true; do
             break;;
         8 ) echo "You picked $opt which is option $REPLY"
             
+            echo -e "${CYAN} Pulling newest version...${NC}"
+            git pull
+            
+            break;;
+        
+        9 ) echo "You picked $opt which is option $REPLY"
+            
             echo -e "${CYAN} Thank you, that is the best option! :) ${NC}"
             
             break;;
