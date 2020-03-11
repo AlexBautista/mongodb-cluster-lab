@@ -38,7 +38,9 @@ while true; do
         "Verify Docker containers"
         "Start Cluster"
         "Stop Cluster"
-        "Shutdown and remove cluster (WARNING:this will remove all containers!)")
+        "Shutdown and remove cluster (WARNING:this will remove all containers!)"
+        "Prune All Docker files (WARNING:this will remove all containers,images,networks and volumes!)"
+        "Invite Alejandro a Cofee! (best option)")
 
     echo -e "${GREEN} $title ${NC}"
     PS3="$prompt "
@@ -89,31 +91,44 @@ while true; do
             break;;       
         4 ) echo "You picked $opt which is option: $REPLY"
             
-            
+            echo -e "${CYAN} [TASK] STARTING MONGO LAB CLUSTER AND MONGO EXPRESS... ${NC}"
             docker-compose up -d
-            docker run --name mongo-express-gui -d --network pss_default -e ME_CONFIG_MONGODB_SERVER=mongolab-mongo-config-01,mongolab-mongo-config-02,mongolab-mongo-config-03 -p 8081:8081 mongo-express
-                       
+            docker start mongo-express-gui                       
         
             break;;   
         5 ) echo "You picked $opt which is option $REPLY"
             
-            docker stop mongo-express-gui
-            docker rm mongo-express-gui
+            echo -e "${CYAN} [TASK] STOPPING MONGO LAB CLUSTER AND MONGO EXPRESS... ${NC}"
+            docker stop mongo-express-gui        
             docker-compose down
         
             break;;       
         6 ) echo "You picked $opt which is option $REPLY"
             
+            echo -e "${CYAN} [TASK] REMOVING MONGO LAB CLUSTER AND MONGO EXPRESS CONTAINERS... ${NC}"
+
             docker container stop $(docker container ls -aq | grep mongolab)
             docker stop mongo-express-gui
+            docker rm mongo-express-gui
             docker container rm  mongo-express-gui
             docker-compose rm
             docker-compose down -v --rmi all --remove-orphans
         
             break;;
 
-        $(( ${#options[@]}+1 )) ) echo "Goodbye!"; exit;;
-        *) echo "Invalid option. Try another one.";continue;;
+        7 ) echo "You picked $opt which is option $REPLY"
+            
+            echo -e "${CYAN} [TASK] DOCKER SYSTEM PRUNE... ${NC}"
+            docker system prune -a --volumes   
+
+            break;;
+        8 ) echo "You picked $opt which is option $REPLY"
+            
+            echo -e "${CYAN} Thank you! :D ${NC}"
+            
+            break;;
+        $(( ${#options[@]}+1 )) ) echo -e "${YELLOW}Goodbye!${NC}"; exit;;
+        *) echo -e "${RED}Invalid option. Try another one.${NC}";continue;;
 
         esac
     done
@@ -124,7 +139,7 @@ while true; do
         case $REPLY in
             1) break 2 ;;
             2) break ;;
-            *) echo "Look, it's a simple question..." >&2
+            *) echo -e "${RED}Invalid option! 1=Yes 2=No ${NC} " >&2
         esac
     done
 
