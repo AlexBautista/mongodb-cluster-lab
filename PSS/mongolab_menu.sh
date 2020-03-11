@@ -124,7 +124,7 @@ while true; do
             break;;
         8 ) echo "You picked $opt which is option $REPLY"
             
-            echo -e "${CYAN} Thank you! :D ${NC}"
+            echo -e "${CYAN} Thank you, that is the best option! :) ${NC}"
             
             break;;
         $(( ${#options[@]}+1 )) ) echo -e "${YELLOW}Goodbye!${NC}"; exit;;
