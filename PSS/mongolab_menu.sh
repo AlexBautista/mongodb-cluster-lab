@@ -124,7 +124,7 @@ while true; do
             break;;
         8 ) echo "You picked $opt which is option $REPLY"
             
-            echo -e "${CYAN} Pulling newest version...${NC}"
+            echo -e "${CYAN}[TASK] Pulling newest version...${NC}"
             git pull
             
             break;;
