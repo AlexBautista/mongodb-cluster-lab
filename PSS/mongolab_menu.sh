@@ -40,6 +40,7 @@ while true; do
         "Stop Cluster"
         "Shutdown and remove cluster (WARNING:this will remove all containers!)"
         "Prune All Docker files (WARNING:this will remove all containers,images,networks and volumes!)"
+        "Update MongoDB Lab Cluster Code"
         "Invite Alejandro a Cofee! (best option)")
 
     echo -e "${GREEN} $title ${NC}"
